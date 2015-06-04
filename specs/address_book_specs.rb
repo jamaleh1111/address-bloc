@@ -34,12 +34,9 @@ RSpec.describe AddressBook do
             expect(new_entry.email).eql? 'augusta.king@lovelace.com'
         end
     end
-<<<<<<< HEAD
-=======
     
     context ".remove_entry" do
         it "removes entry from the address book" do
         end
     end
->>>>>>> assignment-21
 end
