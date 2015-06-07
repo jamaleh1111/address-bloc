@@ -45,55 +45,37 @@ RSpec.describe AddressBook do
             book_size = book.entries.size
             
             expect(book_size).to eql 5
-<<<<<<< HEAD
-          end
-        
-        it "checks the details of the first entry" do
-=======
         end
         
+ 
         it "imports the 1st entry" do
->>>>>>> checkpoint-23-csv
             book.import_from_csv("entries.csv")
             entry_one = book.entries[0]
             check_entry(entry_one, "Bill", "555-555-5555", "bill@blocmail.com")
         end
           
-<<<<<<< HEAD
-        it "checks the details of the second entry" do
-=======
+
         it "imports the 2nd entry" do
->>>>>>> checkpoint-23-csv
             book.import_from_csv("entries.csv")
             entry_two = book.entries[1]
             check_entry(entry_two, "Bob", "555-555-5555", "bob@blocmail.com")
         end
           
-<<<<<<< HEAD
-        it "checks the details of the third entry" do
-=======
+
         it "imports the 3rd entry" do
->>>>>>> checkpoint-23-csv
             book.import_from_csv("entries.csv")
             entry_three = book.entries[2]
             check_entry(entry_three, "Joe", "555-555-5555", "joe@blocmail.com")
         end
           
-<<<<<<< HEAD
-        it "checks the details of the fourth entry" do
-=======
+
         it "imports the 4th entry" do
->>>>>>> checkpoint-23-csv
             book.import_from_csv("entries.csv")
             entry_four = book.entries[3]
             check_entry(entry_four, "Sally", "555-555-5555", "sally@blocmail.com")
         end
-          
-<<<<<<< HEAD
-        it "checks the details of the fifth entry" do
-=======
+
         it "imports the 5th entry" do
->>>>>>> checkpoint-23-csv
             book.import_from_csv("entries.csv")
             entry_five = book.entries[4]
             check_entry(entry_five, "Sussie", "555-555-5555", "sussie@blocmail.com")

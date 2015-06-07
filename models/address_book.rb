@@ -15,11 +15,8 @@ class AddressBook
       if name < entry.name
         break
       end
-<<<<<<< HEAD
-        index += 1
-=======
+
       index += 1
->>>>>>> checkpoint-23-csv
     end
     @entries.insert(index, Entry.new(name, phone, email))
   end
