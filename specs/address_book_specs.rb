@@ -45,7 +45,12 @@ RSpec.describe AddressBook do
             book_size = book.entries.size
             
             expect(book_size).to eql 5
+<<<<<<< Updated upstream
         end
+=======
+          end
+    
+>>>>>>> Stashed changes
         
  
         it "imports the 1st entry" do
@@ -54,13 +59,20 @@ RSpec.describe AddressBook do
             check_entry(entry_one, "Bill", "555-555-5555", "bill@blocmail.com")
         end
           
+<<<<<<< Updated upstream
 
+=======
+       
+>>>>>>> Stashed changes
         it "imports the 2nd entry" do
             book.import_from_csv("entries.csv")
             entry_two = book.entries[1]
             check_entry(entry_two, "Bob", "555-555-5555", "bob@blocmail.com")
         end
+<<<<<<< Updated upstream
           
+=======
+>>>>>>> Stashed changes
 
         it "imports the 3rd entry" do
             book.import_from_csv("entries.csv")
@@ -74,6 +86,10 @@ RSpec.describe AddressBook do
             entry_four = book.entries[3]
             check_entry(entry_four, "Sally", "555-555-5555", "sally@blocmail.com")
         end
+<<<<<<< Updated upstream
+=======
+          
+>>>>>>> Stashed changes
 
         it "imports the 5th entry" do
             book.import_from_csv("entries.csv")
@@ -81,6 +97,33 @@ RSpec.describe AddressBook do
             check_entry(entry_five, "Sussie", "555-555-5555", "sussie@blocmail.com")
         end
     end
+
+    context ".import_from_csv" do
+        it "imports the correct number of entries" do
+            book.import_from_csv("entries.csv")
+            book_size = book.entries_2.size
+            
+            expect(book_size).to eql 3
+        end
+        
+        it "imports the 1st entry" do
+            book.import_from_csv("entries.csv")
+            entry_one = book.entries[0]
+            check_entry(entry_one, "Peter", "555-555-5555", "peter@blocmail.com")
+        end
+       
+        it "imports the 2nd entry" do
+            book.import_from_csv("entries.csv")
+            entry_two = book.entries[1]
+            check_entry(entry_two, "Jamaleh", "555-555-5555", "jamaleh@blocmail.com")
+        end
+
+        it "imports the 3rd entry" do
+            book.import_from_csv("entries.csv")
+            entry_three = book.entries[2]
+            check_entry(entry_three, "Emani", "555-555-5555", "emani@blocmail.com")
+        end
+    end 
 end
                                    
     
