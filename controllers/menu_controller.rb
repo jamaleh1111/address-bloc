@@ -16,6 +16,7 @@ class MenuController
         puts "3 - Search for an entry"
         puts "4 - Import entries from a CSV"
         puts "5 - Exit"
+        puts "6 - demolish all entries"
         print "Enter your selection: "
         
 
@@ -42,6 +43,10 @@ class MenuController
           puts "Good-bye!"
           
           exit (0)
+        when 6
+          puts "All entries demolished!"
+          demolish
+          main_menu
           
         else
           system "clear"
@@ -138,7 +143,6 @@ class MenuController
         read_csv
       end 
     end
-  end
 
     def entry_submenu(entry)
        puts "\nn - next entry"
@@ -187,4 +191,11 @@ class MenuController
       puts "Updated entry:"
       puts entry
     end 
+
+    def demolish
+      @address_book.entries.delete
+    end 
+
+
+
 
