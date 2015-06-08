@@ -1,6 +1,7 @@
 
 require_relative "../models/address_book"
 
+
 class MenuController
     attr_accessor :address_book
     
@@ -45,7 +46,7 @@ class MenuController
           exit (0)
         when 6
           puts "All entries demolished!"
-          demolish
+          demolish_all_entries
           main_menu
           
         else
@@ -191,10 +192,12 @@ class MenuController
       puts "Updated entry:"
       puts entry
     end 
+  end 
 
-    def demolish
+    def demolish_all_entries
       @address_book.entries.delete
     end 
+
 
 
 
