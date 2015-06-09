@@ -45,8 +45,8 @@ class MenuController
           
           exit (0)
         when 6
-          puts "All entries demolished!"
-          demolish_all_entries
+          puts "Do you want to delete all entries?"
+          demolish
           main_menu
           
         else
@@ -194,11 +194,18 @@ class MenuController
     end 
   end 
 
-    def demolish_all_entries
-      @address_book.entries.delete
+    def demolish
+      puts "Enter y or n"
+      puts "y - All entries demolished"
+      puts "n - Go back to main_menu"
+      selection = gets.chomp
+
+      case selection
+
+      when "y"
+        @address_book.entries.demolish 
+      else 
+        main_menu
+      end 
     end 
-
-
-
-
-
+    
