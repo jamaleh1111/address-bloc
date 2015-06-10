@@ -195,17 +195,11 @@ class MenuController
   end 
 
     def demolish
-      puts "Enter y or n"
-      puts "y - All entries demolished"
-      puts "n - Go back to main_menu"
-      selection = gets.chomp
+      entry_count = @address_book.entries.size
 
-      case selection
+      entry_count.times do
+        delete_entry(@address_book.entries[0])
+      end
 
-      when "y"
-        @address_book.entries.demolish 
-      else 
-        main_menu
-      end 
     end 
     
